@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPower - Our Services</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .services-hero {
+            background: linear-gradient(135deg, rgba(15, 15, 27, 0.9) 0%, rgba(110, 69, 226, 0.7) 100%),
+                url('https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 120px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(110, 69, 226, 0.3) 0%, transparent 40%);
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 700px;
+            margin: 0 auto 60px;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(110, 69, 226, 0.1) 0%, rgba(110, 69, 226, 0) 70%);
+            z-index: -1;
+            transition: all 0.5s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .service-card:hover::before {
+            transform: translate(25%, 25%);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            border-radius: 15px;
+            color: white;
+            font-size: 1.8rem;
+        }
+
+        .service-title {
+            color: white;
+            font-weight: 600;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .service-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .service-btn {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .service-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(110, 69, 226, 0.3);
+            color: white;
+        }
+
+        /* Service Modal */
+        .service-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 15, 27, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .service-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background: var(--dark);
+            border-radius: 15px;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            padding: 40px;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--accent);
+            transform: rotate(90deg);
+        }
+
+        .modal-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .modal-description {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .features-list {
+            margin-bottom: 30px;
+        }
+
+        .features-list li {
+            margin-bottom: 10px;
+            color: rgba(255, 255, 255, 0.8);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .features-list li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 25px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .call-btn {
+            background: var(--primary);
+            color: white;
+        }
+
+        .whatsapp-btn {
+            background: #25D366;
+            color: white;
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Floating Buttons */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- navbar -->
+    <section class="navigation-section">
+        <!-- Desktop Navbar -->
+        <nav class="pixel-navbar desktop-nav">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <!-- Logo with Particle Animation -->
+                    <div class="logo-container">
+                        <span class="logo-main">PIXELPOWER</span>
+                        <div class="logo-particles" id="particle-container"></div>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <a href="#" class="nav-link active">Home</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="services.html" class="nav-link">Services</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="projects.html" class="nav-link">Work</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#" class="nav-link">Blog</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button with Dropdown -->
+                    <div class="cta-dropdown">
+                        <button class="nav-cta" id="ctaButton">Get Started</button>
+                        <div class="cta-options" id="ctaOptions">
+                            <a href="tel:+1234567890" class="cta-option call-option">
+                                <i class="fas fa-phone"></i> Call Us
+                            </a>
+                            <a href="https://wa.me/1234567890" target="_blank" class="cta-option whatsapp-option">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navbar -->
+        <nav class="pixel-navbar mobile-nav">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="logo-container">
+                        <span class="logo-main">PIXELPOWER</span>
+                    </div>
+                    <div class="mobile-toggle" id="mobileToggle">
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="logo-container">
+                    <span class="logo-main">PIXELPOWER</span>
+                </div>
+                <div class="mobile-close" id="mobileClose">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="mobile-menu-content">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="mobile-cta-dropdown">
+                    <button class="nav-cta" id="mobileCtaButton">Get Started</button>
+                    <div class="cta-options" id="mobileCtaOptions">
+                        <a href="tel:+1234567890" class="cta-option call-option">
+                            <i class="fas fa-phone"></i> Call Us
+                        </a>
+                        <a href="https://wa.me/1234567890" target="_blank" class="cta-option whatsapp-option">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <h1 class="hero-title">OUR SERVICES</h1>
+            <p class="hero-subtitle">We deliver cutting-edge digital solutions tailored to your business needs. Explore
+                our comprehensive range of services designed to elevate your digital presence.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title">What We Offer</h2>
+            <p class="section-subtitle">From concept to deployment, we provide end-to-end digital solutions that drive
+                results and exceed expectations.</p>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">Custom websites and web applications built with modern technologies
+                        for optimal performance and user experience.</p>
+                    <button class="service-btn details-btn" data-service="web">Details</button>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="service-title">Mobile App Development</h3>
+                    <p class="service-description">Native and cross-platform mobile applications for iOS and Android
+                        that engage users and drive growth.</p>
+                    <button class="service-btn details-btn" data-service="mobile">Details</button>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-description">Beautiful, intuitive interfaces designed to enhance user satisfaction
+                        and improve usability.</p>
+                    <button class="service-btn details-btn" data-service="design">Details</button>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3 class="service-title">Digital Marketing</h3>
+                    <p class="service-description">Comprehensive digital marketing strategies to increase visibility,
+                        traffic, and conversions.</p>
+                    <button class="service-btn details-btn" data-service="marketing">Details</button>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="service-title">Cloud Solutions</h3>
+                    <p class="service-description">Scalable cloud infrastructure and services to optimize your business
+                        operations and reduce costs.</p>
+                    <button class="service-btn details-btn" data-service="cloud">Details</button>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="service-title">Cyber Security</h3>
+                    <p class="service-description">Protect your digital assets with our comprehensive security
+                        assessments and solutions.</p>
+                    <button class="service-btn details-btn" data-service="security">Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Modals -->
+    <!-- Web Development Modal -->
+    <div class="service-modal" id="web-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Web Development</h3>
+            <p class="modal-description">Our web development services create powerful, responsive websites and web
+                applications that deliver exceptional user experiences. We combine cutting-edge technologies with proven
+                methodologies to build solutions that drive business growth.</p>
+
+            <h4>Key Features:</h4>
+            <ul class="features-list">
+                <li>Custom website development from scratch</li>
+                <li>E-commerce solutions with secure payment gateways</li>
+                <li>Content Management Systems (WordPress, Drupal, etc.)</li>
+                <li>Progressive Web Apps (PWAs) for app-like experiences</li>
+                <li>API development and integration</li>
+                <li>Performance optimization and SEO-friendly structure</li>
+                <li>Ongoing maintenance and support</li>
+            </ul>
+
+            <div class="modal-actions">
+                <a href="tel:+1234567890" class="action-btn call-btn">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+                <a href="https://wa.me/1234567890" class="action-btn whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile App Development Modal -->
+    <div class="service-modal" id="mobile-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Mobile App Development</h3>
+            <p class="modal-description">We create engaging, high-performance mobile applications for both iOS and
+                Android platforms. Our apps are designed to solve business challenges, enhance customer engagement, and
+                drive revenue growth.</p>
+
+            <h4>Key Features:</h4>
+            <ul class="features-list">
+                <li>Native iOS (Swift) and Android (Kotlin) development</li>
+                <li>Cross-platform development (React Native, Flutter)</li>
+                <li>UI/UX design optimized for mobile</li>
+                <li>Integration with backend systems and APIs</li>
+                <li>Push notification implementation</li>
+                <li>App store optimization and deployment</li>
+                <li>Ongoing updates and maintenance</li>
+            </ul>
+
+            <div class="modal-actions">
+                <a href="tel:+1234567890" class="action-btn call-btn">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+                <a href="https://wa.me/1234567890" class="action-btn whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add similar modals for other services -->
+    <!-- UI/UX Design Modal -->
+    <div class="service-modal" id="design-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">UI/UX Design</h3>
+            <p class="modal-description">Our design process focuses on creating intuitive, visually stunning interfaces
+                that delight users while achieving business objectives. We combine aesthetics with functionality to
+                deliver exceptional digital experiences.</p>
+
+            <h4>Key Features:</h4>
+            <ul class="features-list">
+                <li>User research and persona development</li>
+                <li>Information architecture and wireframing</li>
+                <li>Interactive prototypes and mockups</li>
+                <li>User testing and feedback implementation</li>
+                <li>Responsive design for all devices</li>
+                <li>Design systems and style guides</li>
+                <li>Accessibility compliance (WCAG)</li>
+            </ul>
+
+            <div class="modal-actions">
+                <a href="tel:+1234567890" class="action-btn call-btn">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+                <a href="https://wa.me/1234567890" class="action-btn whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Digital Marketing Modal -->
+    <div class="service-modal" id="marketing-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Digital Marketing</h3>
+            <p class="modal-description">Our comprehensive digital marketing strategies are designed to increase your
+                online visibility, attract qualified traffic, and convert visitors into customers. We use data-driven
+                approaches to maximize your ROI.</p>
+
+            <h4>Key Features:</h4>
+            <ul class="features-list">
+                <li>Search Engine Optimization (SEO)</li>
+                <li>Pay-Per-Click (PPC) advertising</li>
+                <li>Social media marketing and management</li>
+                <li>Content marketing and strategy</li>
+                <li>Email marketing campaigns</li>
+                <li>Conversion rate optimization</li>
+                <li>Analytics and performance tracking</li>
+            </ul>
+
+            <div class="modal-actions">
+                <a href="tel:+1234567890" class="action-btn call-btn">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+                <a href="https://wa.me/1234567890" class="action-btn whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cloud Solutions Modal -->
+    <div class="service-modal" id="cloud-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Cloud Solutions</h3>
+            <p class="modal-description">We help businesses leverage cloud computing to improve scalability, reduce
+                costs, and enhance operational efficiency. Our cloud solutions are tailored to your specific business
+                requirements.</p>
+
+            <h4>Key Features:</h4>
+            <ul class="features-list">
+                <li>Cloud infrastructure setup and migration</li>
+                <li>AWS, Azure, and Google Cloud solutions</li>
+                <li>Serverless architecture implementation</li>
+                <li>Cloud security and compliance</li>
+                <li>Disaster recovery planning</li>
+                <li>Cost optimization strategies</li>
+                <li>24/7 monitoring and support</li>
+            </ul>
+
+            <div class="modal-actions">
+                <a href="tel:+1234567890" class="action-btn call-btn">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+                <a href="https://wa.me/1234567890" class="action-btn whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cyber Security Modal -->
+    <div class="service-modal" id="security-modal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <h3 class="modal-title">Cyber Security</h3>
+            <p class="modal-description">Protect your digital assets with our comprehensive security services. We
+                identify vulnerabilities, implement robust protections, and ensure compliance with industry standards.
+            </p>
+
+            <h4>Key Features:</h4>
+            <ul class="features-list">
+                <li>Security audits and vulnerability assessments</li>
+                <li>Penetration testing and ethical hacking</li>
+                <li>Network security implementation</li>
+                <li>Data encryption and protection</li>
+                <li>Compliance with GDPR, HIPAA, etc.</li>
+                <li>Security awareness training</li>
+                <li>Incident response planning</li>
+            </ul>
+
+            <div class="modal-actions">
+                <a href="tel:+1234567890" class="action-btn call-btn">
+                    <i class="fas fa-phone"></i> Call Us
+                </a>
+                <a href="https://wa.me/1234567890" class="action-btn whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Background Elements -->
+        <div class="footer-elements">
+            <div class="footer-shape footer-shape-1"></div>
+            <div class="footer-shape footer-shape-2"></div>
+        </div>
+
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Column -->
+                <div class="footer-about-col">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">PIXELPOWER</span>
+                    </div>
+                    <p class="footer-about">
+                        We are a full-service digital agency specializing in web development, SEO, and GMB optimization.
+                        Our mission is to deliver high-quality, customized solutions that drive real results.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                        <li><a href="#">GMB Setup</a></li>
+                        <li><a href="#">E-Commerce</a></li>
+                        <li><a href="#">Web Applications</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                        Subscribe to our newsletter for the latest updates and digital insights.
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your Email" required>
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2023 PixelPower. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </footer>
+
+    <script>
+        // service page
+        document.addEventListener("DOMContentLoaded", function () {
+            const detailBtns = document.querySelectorAll(".details-btn");
+            const modals = document.querySelectorAll(".service-modal");
+            const closeBtns = document.querySelectorAll(".modal-close");
+
+            // Open modal when Details button is clicked
+            detailBtns.forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    const service = this.getAttribute("data-service");
+                    const modal = document.getElementById(`${service}-modal`);
+                    modal.classList.add("active");
+                    document.body.style.overflow = "hidden";
+                });
+            });
+
+            // Close modal when X button is clicked
+            closeBtns.forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    const modal = this.closest(".service-modal");
+                    modal.classList.remove("active");
+                    document.body.style.overflow = "auto";
+                });
+            });
+
+            // Close modal when clicking outside content
+            modals.forEach((modal) => {
+                modal.addEventListener("click", function (e) {
+                    if (e.target === this) {
+                        this.classList.remove("active");
+                        document.body.style.overflow = "auto";
+                    }
+                });
+            });
+
+            // Close modal with Escape key
+            document.addEventListener("keydown", function (e) {
+                if (e.key === "Escape") {
+                    modals.forEach((modal) => {
+                        if (modal.classList.contains("active")) {
+                            modal.classList.remove("active");
+                            document.body.style.overflow = "auto";
+                        }
+                    });
+                }
+            });
+        });
+
+    </script>
+</body>
+
+</html>

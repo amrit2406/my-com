@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPower - Next-Gen Digital Solutions</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- animate css -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar">
+    <!-- navbar -->
+    <section class="navigation-section animate__animated animate__fadeInDown">
+        <!-- Desktop Navbar -->
+        <nav class="pixel-navbar desktop-nav">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <!-- Logo with Particle Animation -->
+                    <a href="index.html" class="logo-container text-decoration-none">
+                        <span class="logo-main">PIXELPOWER</span>
+                        <div class="logo-particles" id="particle-container"></div>
+                    </a>
+
+                    <!-- Navigation Links -->
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <a href="index.html" class="nav-link active">Home</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="services.html" class="nav-link">Services</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="projects.html" class="nav-link">Work</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </div>
+                        <!-- <div class="nav-item">
+                            <a href="#" class="nav-link">Blog</a>
+                        </div> -->
+                        <div class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button with Dropdown -->
+                    <div class="cta-dropdown">
+                        <button class="nav-cta" id="ctaButton">Get Started</button>
+                        <div class="cta-options" id="ctaOptions">
+                            <a href="tel:+1234567890" class="cta-option call-option">
+                                <i class="fas fa-phone"></i> Call Us
+                            </a>
+                            <a href="https://wa.me/1234567890" target="_blank" class="cta-option whatsapp-option">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navbar -->
+        <nav class="pixel-navbar mobile-nav">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="logo-container">
+                        <span class="logo-main">PIXELPOWER</span>
+                    </div>
+                    <div class="mobile-toggle" id="mobileToggle">
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="logo-container">
+                    <span class="logo-main">PIXELPOWER</span>
+                </div>
+                <div class="mobile-close" id="mobileClose">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="mobile-menu-content">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <!-- <div class="mobile-cta-dropdown">
+                    <button class="nav-cta" id="mobileCtaButton">Get Started</button>
+                    <div class="cta-options" id="mobileCtaOptions">
+                        <a href="tel:+1234567890" class="cta-option call-option">
+                            <i class="fas fa-phone"></i> Call Us
+                        </a>
+                        <a href="https://wa.me/1234567890" target="_blank" class="cta-option whatsapp-option">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <!-- Background Elements -->
+        <div class="hero-bg-elements">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+
+        <!-- Floating Tech Icons -->
+        <div class="tech-icons">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="tech-icon"
+                style="top: 10%; left: 15%; width: 60px; animation-delay: 0s;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="tech-icon"
+                style="top: 20%; left: 80%; width: 60px; animation-delay: 2s;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                class="tech-icon" style="top: 60%; left: 10%; width: 60px; animation-delay: 4s;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="tech-icon"
+                style="top: 70%; left: 85%; width: 60px; animation-delay: 6s;">
+        </div>
+
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content animate__animated animate__fadeInLeft animate__delay-0.3s">
+                        <h1 class="hero-title">Transform Your Digital Presence</h1>
+                        <p class="hero-subtitle">PixelPower delivers cutting-edge web solutions, SEO strategies, and GMB
+                            optimization to elevate your online presence and drive measurable results.</p>
+                        <div class="hero-cta-group">
+                            <a href="#" class="btn btn-primary">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
+                            <a href="#" class="btn btn-outline">Our Services <i class="fas fa-briefcase ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-visual animate__animated animate__fadeInRight animate__delay-0.5s">
+                        <img src="img/qwe.png" alt="Digital Solutions" class="img-fluid hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badge Section -->
+    <section class="trust-section">
+        <div class="container-fluid px-0">
+            <div class="section-heading">
+                <h2>TRUSTED BY INNOVATIVE COMPANIES</h2>
+            </div>
+
+            <div class="gradient-overlay-left"></div>
+            <div class="gradient-overlay-right"></div>
+
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <!-- Duplicate logos for infinite loop effect -->
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                            alt="Google">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                            alt="Microsoft">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Samsung_Logo.svg" alt="Samsung">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Tesla_logo.png" alt="Tesla">
+                    </div>
+                    <!-- Duplicates -->
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"
+                            alt="Google">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg"
+                            alt="Microsoft">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Samsung_Logo.svg" alt="Samsung">
+                    </div>
+                    <div class="logo-slide">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Tesla_logo.png" alt="Tesla">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <!-- Background Elements -->
+        <div class="service-bg-element bg-element-1"></div>
+        <div class="service-bg-element bg-element-2"></div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">OUR DIGITAL SERVICES</h2>
+                <p class="section-subtitle">Comprehensive solutions tailored to elevate your online presence and drive
+                    measurable business growth</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">Custom-built websites designed for performance, security, and
+                        seamless user experiences across all devices.</p>
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Responsive Design</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>E-Commerce Solutions</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>CMS Integration</span>
+                        </div>
+                    </div>
+                    <a href="#" class="service-cta">Explore Service →</a>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">SEO Optimization</h3>
+                    <p class="service-description">Data-driven strategies to improve your search visibility, drive
+                        organic traffic, and dominate your market.</p>
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Keyword Research</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Technical Audits</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Content Strategy</span>
+                        </div>
+                    </div>
+                    <a href="#" class="service-cta">Explore Service →</a>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="service-title">GMB Optimization</h3>
+                    <p class="service-description">Maximize your local presence with professionally optimized Google My
+                        Business profiles and management.</p>
+                    <div class="service-features">
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Profile Setup</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Review Management</span>
+                        </div>
+                        <div class="service-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Local SEO Integration</span>
+                        </div>
+                    </div>
+                    <a href="#" class="service-cta">Explore Service →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section">
+        <div class="timeline-track"></div>
+
+        <div class="container about-container">
+            <div class="section-intro">
+                <h2 class="section-title">OUR STORY</h2>
+                <p class="section-subtitle">From humble beginnings to becoming a leading digital agency, our journey has
+                    been driven by innovation and passion for technology.</p>
+            </div>
+
+            <!-- Interactive Timeline -->
+            <div class="timeline">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2015</div>
+                        <h3 class="timeline-title">Founded in a Garage</h3>
+                        <p class="timeline-description">PixelPower began as two friends with a shared vision to create
+                            beautiful, functional websites. Our first office was a converted garage space.</p>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2017</div>
+                        <h3 class="timeline-title">First Major Client</h3>
+                        <p class="timeline-description">Landed our first enterprise client, developing an e-commerce
+                            platform that generated $2M in first-year revenue for them.</p>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2019</div>
+                        <h3 class="timeline-title">Expanded Services</h3>
+                        <p class="timeline-description">Added SEO and digital marketing services to our offerings,
+                            becoming a full-service digital agency.</p>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2021</div>
+                        <h3 class="timeline-title">Award-Winning Work</h3>
+                        <p class="timeline-description">Received the "Digital Innovation Award" for our work on a
+                            revolutionary web application in the fintech space.</p>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">2023</div>
+                        <h3 class="timeline-title">Global Reach</h3>
+                        <p class="timeline-description">Now serving clients in 12 countries with a team of 25 digital
+                            experts across web development, SEO, and digital strategy.</p>
+                    </div>
+                    <div class="timeline-marker"></div>
+                </div>
+            </div>
+
+            <!-- Team Showcase -->
+            <div class="team-section">
+                <div class="team-title">
+                    <h2 class="section-title">MEET THE TEAM</h2>
+                    <p class="section-subtitle">The brilliant minds behind PixelPower's success</p>
+                </div>
+
+                <div class="team-grid">
+                    <!-- Team Member 1 -->
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                                alt="Alex Johnson">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Alex Johnson</h3>
+                            <p class="member-role">CEO & Founder</p>
+                            <p class="member-bio">Visionary leader with 15+ years in digital transformation and business
+                                strategy.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 2 -->
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                                alt="Sarah Chen">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Sarah Chen</h3>
+                            <p class="member-role">Creative Director</p>
+                            <p class="member-bio">Design expert focused on creating memorable user experiences.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-dribbble"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 3 -->
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                                alt="Michael Rodriguez">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Michael Rodriguez</h3>
+                            <p class="member-role">Lead Developer</p>
+                            <p class="member-bio">Full-stack wizard specializing in React, Node.js, and cloud
+                                architecture.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-stack-overflow"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Member 4 -->
+                    <div class="team-member">
+                        <div class="member-image">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80"
+                                alt="Priya Patel">
+                        </div>
+                        <div class="member-info">
+                            <h3 class="member-name">Priya Patel</h3>
+                            <p class="member-role">SEO Strategist</p>
+                            <p class="member-bio">Organic growth specialist with a track record of top-ranking
+                                campaigns.</p>
+                            <div class="member-social">
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Counter -->
+            <div class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="150">0</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50">0</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="12">0</div>
+                        <div class="stat-label">Countries Served</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="25">0</div>
+                        <div class="stat-label">Team Members</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section class="tech-section">
+        <!-- Background Elements -->
+        <div class="tech-elements">
+            <div class="tech-shape tech-shape-1"></div>
+            <div class="tech-shape tech-shape-2"></div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">OUR TECHNOLOGY STACK</h2>
+                <p class="section-subtitle">We leverage cutting-edge technologies to build fast, secure, and scalable
+                    digital solutions tailored to your business needs</p>
+            </div>
+
+            <!-- Tech Categories (Optional Filter) -->
+            <div class="tech-categories">
+                <div class="tech-category active">All</div>
+                <div class="tech-category">Frontend</div>
+                <div class="tech-category">Backend</div>
+                <div class="tech-category">Database</div>
+                <div class="tech-category">DevOps</div>
+                <div class="tech-category">Design</div>
+            </div>
+
+            <!-- Tech Stack Grid -->
+            <div class="tech-grid">
+                <!-- Frontend Technologies -->
+                <div class="tech-item" data-category="frontend">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                            alt="HTML5">
+                    </div>
+                    <h4 class="tech-name">HTML5</h4>
+                    <div class="tech-category-label">Frontend</div>
+                </div>
+
+                <div class="tech-item" data-category="frontend">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                    </div>
+                    <h4 class="tech-name">CSS3</h4>
+                    <div class="tech-category-label">Frontend</div>
+                </div>
+
+                <div class="tech-item" data-category="frontend">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                            alt="JavaScript">
+                    </div>
+                    <h4 class="tech-name">JavaScript</h4>
+                    <div class="tech-category-label">Frontend</div>
+                </div>
+
+                <div class="tech-item" data-category="frontend">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                            alt="React">
+                    </div>
+                    <h4 class="tech-name">React</h4>
+                    <div class="tech-category-label">Frontend</div>
+                </div>
+
+                <div class="tech-item" data-category="frontend">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                            alt="Bootstrap">
+                    </div>
+                    <h4 class="tech-name">Bootstrap</h4>
+                    <div class="tech-category-label">Frontend</div>
+                </div>
+
+                <!-- Backend Technologies -->
+                <div class="tech-item" data-category="backend">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                            alt="Node.js">
+                    </div>
+                    <h4 class="tech-name">Node.js</h4>
+                    <div class="tech-category-label">Backend</div>
+                </div>
+
+                <div class="tech-item" data-category="backend">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                            alt="Express">
+                    </div>
+                    <h4 class="tech-name">Express</h4>
+                    <div class="tech-category-label">Backend</div>
+                </div>
+
+                <div class="tech-item" data-category="backend">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP">
+                    </div>
+                    <h4 class="tech-name">PHP</h4>
+                    <div class="tech-category-label">Backend</div>
+                </div>
+
+                <div class="tech-item" data-category="backend">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                            alt="Python">
+                    </div>
+                    <h4 class="tech-name">Python</h4>
+                    <div class="tech-category-label">Backend</div>
+                </div>
+
+                <!-- Database Technologies -->
+                <div class="tech-item" data-category="database">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                            alt="MongoDB">
+                    </div>
+                    <h4 class="tech-name">MongoDB</h4>
+                    <div class="tech-category-label">Database</div>
+                </div>
+
+                <div class="tech-item" data-category="database">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL">
+                    </div>
+                    <h4 class="tech-name">MySQL</h4>
+                    <div class="tech-category-label">Database</div>
+                </div>
+
+                <div class="tech-item" data-category="database">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+                            alt="PostgreSQL">
+                    </div>
+                    <h4 class="tech-name">PostgreSQL</h4>
+                    <div class="tech-category-label">Database</div>
+                </div>
+
+                <!-- DevOps Technologies -->
+                <div class="tech-item" data-category="devops">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            alt="Docker">
+                    </div>
+                    <h4 class="tech-name">Docker</h4>
+                    <div class="tech-category-label">DevOps</div>
+                </div>
+
+                <div class="tech-item" data-category="devops">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/aws/aws-original.svg" alt="AWS">
+                    </div>
+                    <h4 class="tech-name">AWS</h4>
+                    <div class="tech-category-label">DevOps</div>
+                </div>
+
+                <div class="tech-item" data-category="devops">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    </div>
+                    <h4 class="tech-name">Git</h4>
+                    <div class="tech-category-label">DevOps</div>
+                </div>
+
+                <!-- Design Technologies -->
+                <div class="tech-item" data-category="design">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                            alt="Figma">
+                    </div>
+                    <h4 class="tech-name">Figma</h4>
+                    <div class="tech-category-label">Design</div>
+                </div>
+
+                <div class="tech-item" data-category="design">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/adobe/adobe-original.svg"
+                            alt="Adobe">
+                    </div>
+                    <h4 class="tech-name">Adobe CC</h4>
+                    <div class="tech-category-label">Design</div>
+                </div>
+
+                <div class="tech-item" data-category="design">
+                    <div class="tech-icon">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sketch/sketch-original.svg"
+                            alt="Sketch">
+                    </div>
+                    <h4 class="tech-name">Sketch</h4>
+                    <div class="tech-category-label">Design</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-section">
+        <!-- Background Elements -->
+        <div class="bg-elements">
+            <div class="floating-element element-1"></div>
+            <div class="floating-element element-2"></div>
+            <div class="floating-element element-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">WHY CHOOSE PIXELPOWER</h2>
+                <p class="section-subtitle">We go beyond standard services to deliver exceptional results through
+                    innovative approaches and cutting-edge technology</p>
+            </div>
+
+            <div class="benefits-grid">
+                <!-- Benefit 1 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="benefit-title">Lightning Fast Delivery</h3>
+                    <p class="benefit-description">Our streamlined processes ensure your project is delivered 30% faster
+                        than industry standards without compromising quality.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="benefit-title">Data-Driven Results</h3>
+                    <p class="benefit-description">We don't guess - every strategy is backed by analytics and continuous
+                        performance monitoring.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="benefit-title">Military-Grade Security</h3>
+                    <p class="benefit-description">Enterprise-level security protocols protect your data and your
+                        customers' information.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="benefit-title">24/7 Support</h3>
+                    <p class="benefit-description">Our team is always available to address your concerns, no matter the
+                        time zone.</p>
+                </div>
+
+                <!-- Benefit 5 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="benefit-title">Innovative Solutions</h3>
+                    <p class="benefit-description">We stay ahead of trends to provide you with modern, effective digital
+                        solutions.</p>
+                </div>
+
+                <!-- Benefit 6 -->
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="benefit-title">Transparent Process</h3>
+                    <p class="benefit-description">Clear communication and no hidden fees - we're partners in your
+                        success.</p>
+                </div>
+            </div>
+
+            <!-- Comparison Table -->
+            <div class="comparison-section">
+                <h3 class="comparison-title">THE PIXELPOWER DIFFERENCE</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Typical Agencies</th>
+                            <th>PixelPower</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Project Management</td>
+                            <td><i class="fas fa-times x-mark"></i> Generic approach</td>
+                            <td><i class="fas fa-check check-mark"></i> Dedicated account manager</td>
+                        </tr>
+                        <tr>
+                            <td>Reporting</td>
+                            <td><i class="fas fa-times x-mark"></i> Monthly basic reports</td>
+                            <td><i class="fas fa-check check-mark"></i> Real-time dashboards</td>
+                        </tr>
+                        <tr>
+                            <td>Technology</td>
+                            <td><i class="fas fa-times x-mark"></i> Outdated frameworks</td>
+                            <td><i class="fas fa-check check-mark"></i> Cutting-edge stack</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td><i class="fas fa-times x-mark"></i> 9-5 business hours</td>
+                            <td><i class="fas fa-check check-mark"></i> 24/7 availability</td>
+                        </tr>
+                        <tr>
+                            <td>Pricing</td>
+                            <td><i class="fas fa-times x-mark"></i> Hidden fees</td>
+                            <td><i class="fas fa-check check-mark"></i> Transparent packages</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonial-elements">
+            <div class="floating-quote quote-1">"</div>
+            <div class="floating-quote quote-2">"</div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">CLIENT SUCCESS STORIES</h2>
+                <p class="section-subtitle">Don't just take our word for it - hear what our clients say about working
+                    with PixelPower</p>
+            </div>
+
+            <div class="testimonials-container" id="testimonialsSlider">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        PixelPower transformed our online presence completely. Our website traffic increased by 300%
+                        within 6 months of working with them. Their team's technical expertise and creative approach
+                        delivered results beyond our expectations.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80"
+                                alt="Sarah Johnson">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, Bright Solutions</p>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video Testimonial -->
+                <div class="video-testimonial">
+                    <video
+                        poster="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80">
+                        <source src="your-video-file.mp4" type="video/mp4">
+                    </video>
+                    <div class="play-button">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        The GMB optimization service was exceptional. We started getting more local leads immediately
+                        after they set up our profile. Their ongoing management has helped us maintain a 4.9-star rating
+                        with 50+ new reviews.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80"
+                                alt="Michael Chen">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Owner, Urban Cafe</p>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        Our e-commerce website developed by PixelPower has been performing beyond expectations. The user
+                        experience is seamless and conversions have doubled since launch. Their attention to detail and
+                        strategic approach made all the difference.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80"
+                                alt="Emily Rodriguez">
+                        </div>
+                        <div class="author-info">
+                            <h4>Emily Rodriguez</h4>
+                            <p>Marketing Director, StyleHub</p>
+                            <div class="author-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-nav">
+                <div class="nav-dot active"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
+                <div class="nav-dot"></div>
+            </div>
+
+            <div class="reviews-badge">
+                <div class="reviews-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <div class="reviews-text">4.9/5 from 47+ reviews</div>
+                <a href="#" class="reviews-link">Read all Google reviews →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container">
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <i class="fas fa-robot"></i>
+                <h3>PixelBot</h3>
+            </div>
+            <button class="chatbot-close-btn">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages">
+            <div class="chatbot-message chatbot-response">
+                <div class="message-content">
+                    Hi there! 👋 I'm PixelBot, your AI assistant. How can I help you today?
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Type your message..." class="chatbot-text-input">
+            <button class="chatbot-send-btn">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+    <button class="chatbot-toggle-btn">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <!-- Background Elements -->
+        <div class="cta-grid-bg"></div>
+
+        <div class="cta-floating">
+            <div class="floating-shape shape-1"></div>
+            <div class="floating-shape shape-2"></div>
+            <div class="floating-shape shape-3"></div>
+
+            <div class="floating-icons">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                    class="floating-icon" style="top: 10%; left: 15%; width: 50px; animation-delay: 0s;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                    class="floating-icon" style="top: 20%; left: 80%; width: 50px; animation-delay: 2s;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    class="floating-icon" style="top: 60%; left: 10%; width: 50px; animation-delay: 4s;">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                    class="floating-icon" style="top: 70%; left: 85%; width: 50px; animation-delay: 6s;">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="cta-container">
+                <h2 class="cta-title">READY TO POWER YOUR DIGITAL TRANSFORMATION?</h2>
+                <p class="cta-subtitle">Join 50+ businesses who trust PixelPower for cutting-edge web solutions, SEO
+                    strategies, and GMB optimization that deliver measurable results.</p>
+
+                <div class="cta-buttons">
+                    <button class="cta-button cta-primary">
+                        <i class="fas fa-calendar-check me-2"></i> Book Free Consultation
+                    </button>
+                    <button class="cta-button cta-secondary">
+                        <i class="fas fa-phone-alt me-2"></i> Call Us Now
+                    </button>
+                </div>
+
+                <div class="cta-visual">
+                    <div class="phone-mockup"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <!-- Background Elements -->
+        <div class="contact-elements">
+            <div class="contact-shape shape-1"></div>
+            <div class="contact-shape shape-2"></div>
+            <div class="contact-shape shape-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">LET'S BUILD SOMETHING AMAZING</h2>
+                <p class="section-subtitle">Get in touch with our team to discuss your project and discover how we can
+                    help grow your business</p>
+            </div>
+
+            <div class="contact-container">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service" class="form-label">Service Interested In</label>
+                            <select id="service" class="form-control">
+                                <option value="">Select a service</option>
+                                <option value="web-dev">Website Development</option>
+                                <option value="seo">SEO Services</option>
+                                <option value="gmb">GMB Optimization</option>
+                                <option value="ecommerce">E-Commerce Solutions</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Your Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane me-2"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3 class="info-title">CONTACT INFORMATION</h3>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Our Office</h4>
+                            <p>123 Tech Street, Digital City, DC 10001</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email Us</h4>
+                            <p>info@pixelpower.com<br>support@pixelpower.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Working Hours</h4>
+                            <p>Monday - Friday: 9am to 6pm<br>Saturday: 10am to 2pm</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+
+                    <div class="contact-map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215256627466!2d-73.9878449241646!3d40.74844097138989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259a9b3117469%3A0xd134e199a405a163!2sEmpire%20State%20Building!5e0!3m2!1sen!2sus!4v1689872345678!5m2!1sen!2sus"
+                            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <!-- Background Elements -->
+        <div class="footer-elements">
+            <div class="footer-shape footer-shape-1"></div>
+            <div class="footer-shape footer-shape-2"></div>
+        </div>
+
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Column -->
+                <div class="footer-about-col">
+                    <div class="footer-logo">
+                        <span class="footer-logo-text">PIXELPOWER</span>
+                    </div>
+                    <p class="footer-about">
+                        We are a full-service digital agency specializing in web development, SEO, and GMB optimization.
+                        Our mission is to deliver high-quality, customized solutions that drive real results.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-dribbble"></i></a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-links">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">SEO Optimization</a></li>
+                        <li><a href="#">GMB Setup</a></li>
+                        <li><a href="#">E-Commerce</a></li>
+                        <li><a href="#">Web Applications</a></li>
+                        <li><a href="#">Digital Marketing</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="footer-newsletter">
+                    <h3>Newsletter</h3>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;">
+                        Subscribe to our newsletter for the latest updates and digital insights.
+                    </p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your Email" required>
+                        <button type="submit" class="newsletter-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2023 PixelPower. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

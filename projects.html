@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPower - Our Work</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@800&family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6e45e2;
+            --secondary: #88d3ce;
+            --accent: #ff7e5f;
+            --dark: #0f0f1b;
+            --light: #f0f8ff;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--dark);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .work-hero {
+            background: linear-gradient(135deg, rgba(15, 15, 27, 0.9) 0%, rgba(110, 69, 226, 0.7) 100%),
+                url('https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 50%, rgba(110, 69, 226, 0.3) 0%, transparent 40%);
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        /* Project Filters */
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            border-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(110, 69, 226, 0.3);
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .project-image {
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+
+        .project-category {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-title {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .project-description {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .project-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tech-tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3px 10px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            color: var(--secondary);
+        }
+
+        .project-link {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .project-link:hover {
+            color: white;
+            gap: 8px;
+        }
+
+        /* Project Modal */
+        .project-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 15, 27, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .project-modal.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-container {
+            background: var(--dark);
+            border-radius: 15px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: transparent;
+            border: none;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            color: var(--accent);
+            transform: rotate(90deg);
+        }
+
+        .modal-header {
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .modal-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .modal-body {
+            padding: 40px;
+        }
+
+        .modal-title {
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .modal-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .modal-meta {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            min-width: 150px;
+        }
+
+        .meta-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .meta-value {
+            color: white;
+            font-weight: 500;
+        }
+
+        .modal-content {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            gap: 40px;
+        }
+
+        .project-details {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.6;
+        }
+
+        .project-details p {
+            margin-bottom: 20px;
+        }
+
+        .project-sidebar {
+            position: relative;
+        }
+
+        .tech-stack {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .tech-stack h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+        }
+
+        .project-actions {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .action-btn:last-child {
+            margin-bottom: 0;
+        }
+
+        .live-btn {
+            background: linear-gradient(45deg, var(--primary), var(--accent));
+            color: white;
+        }
+
+        .github-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Floating Background Elements */
+        .bg-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .bg-shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.1;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .bg-shape-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: 10%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .bg-shape-2 {
+            width: 600px;
+            height: 600px;
+            background: var(--accent);
+            bottom: -10%;
+            right: 5%;
+            animation-delay: 3s;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(20px, 40px);
+            }
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #25D366;
+            color: white;
+            text-align: center;
+            font-size: 1.8rem;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 991.98px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+
+            .modal-content {
+                grid-template-columns: 1fr;
+            }
+
+            .project-sidebar {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .modal-header {
+                height: 250px;
+            }
+
+            .modal-body {
+                padding: 25px;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+    <section class="navigation-section">
+        <!-- Desktop Navbar -->
+        <nav class="pixel-navbar desktop-nav">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <!-- Logo with Particle Animation -->
+                    <div class="logo-container">
+                        <span class="logo-main">PIXELPOWER</span>
+                        <div class="logo-particles" id="particle-container"></div>
+                    </div>
+
+                    <!-- Navigation Links -->
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <a href="#" class="nav-link active">Home</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="services.html" class="nav-link">Services</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="projects.html" class="nav-link">Work</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="about.html" class="nav-link">About</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#" class="nav-link">Blog</a>
+                        </div>
+                        <div class="nav-item">
+                            <a href="contact.html" class="nav-link">Contact</a>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button with Dropdown -->
+                    <div class="cta-dropdown">
+                        <button class="nav-cta" id="ctaButton">Get Started</button>
+                        <div class="cta-options" id="ctaOptions">
+                            <a href="tel:+1234567890" class="cta-option call-option">
+                                <i class="fas fa-phone"></i> Call Us
+                            </a>
+                            <a href="https://wa.me/1234567890" target="_blank" class="cta-option whatsapp-option">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Navbar -->
+        <nav class="pixel-navbar mobile-nav">
+            <div class="container">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="logo-container">
+                        <span class="logo-main">PIXELPOWER</span>
+                    </div>
+                    <div class="mobile-toggle" id="mobileToggle">
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                        <div class="menu-line"></div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-header">
+                <div class="logo-container">
+                    <span class="logo-main">PIXELPOWER</span>
+                </div>
+                <div class="mobile-close" id="mobileClose">
+                    <i class="fas fa-times"></i>
+                </div>
+            </div>
+            <div class="mobile-menu-content">
+                <a href="#" class="nav-link active">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="projects.html" class="nav-link">Work</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="#" class="nav-link">Blog</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <div class="mobile-cta-dropdown">
+                    <button class="nav-cta" id="mobileCtaButton">Get Started</button>
+                    <div class="cta-options" id="mobileCtaOptions">
+                        <a href="tel:+1234567890" class="cta-option call-option">
+                            <i class="fas fa-phone"></i> Call Us
+                        </a>
+                        <a href="https://wa.me/1234567890" target="_blank" class="cta-option whatsapp-option">
+                            <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="work-hero">
+        <div class="container">
+            <h1 class="hero-title">OUR PORTFOLIO</h1>
+            <p class="hero-subtitle">Explore our collection of innovative projects that showcase our expertise and
+                commitment to delivering exceptional digital experiences.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects-section">
+        <div class="bg-elements">
+            <div class="bg-shape bg-shape-1"></div>
+            <div class="bg-shape bg-shape-2"></div>
+        </div>
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+
+            <!-- Project Filters -->
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="design">UI/UX</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="web" data-project="nexus">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Nexus Dashboard">
+                        <span class="project-category">Web App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Nexus Dashboard</h3>
+                        <p class="project-description">A comprehensive analytics dashboard for enterprise clients with
+                            real-time data visualization and custom reporting tools.</p>
+                        <div class="project-meta">
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                            </div>
+                            <a href="#" class="project-link view-btn">View Project <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="mobile" data-project="pulse">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Pulse Fitness">
+                        <span class="project-category">Mobile App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Pulse Fitness</h3>
+                        <p class="project-description">A health and fitness app with personalized workout plans,
+                            nutrition tracking, and community features.</p>
+                        <div class="project-meta">
+                            <div class="project-tech">
+                                <span class="tech-tag">Flutter</span>
+                                <span class="tech-tag">Firebase</span>
+                            </div>
+                            <a href="#" class="project-link view-btn">View Project <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="ecommerce" data-project="urban">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Urban Style">
+                        <span class="project-category">E-commerce</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Urban Style</h3>
+                        <p class="project-description">An online fashion retailer with advanced product customization
+                            and AR try-on features.</p>
+                        <div class="project-meta">
+                            <div class="project-tech">
+                                <span class="tech-tag">Shopify</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Three.js</span>
+                            </div>
+                            <a href="#" class="project-link view-btn">View Project <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="design" data-project="flow">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Flow UI Kit">
+                        <span class="project-category">UI/UX</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Flow UI Kit</h3>
+                        <p class="project-description">A design system and component library for creating consistent,
+                            accessible digital experiences.</p>
+                        <div class="project-meta">
+                            <div class="project-tech">
+                                <span class="tech-tag">Figma</span>
+                                <span class="tech-tag">Storybook</span>
+                            </div>
+                            <a href="#" class="project-link view-btn">View Project <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="branding" data-project="vibe">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Vibe Branding">
+                        <span class="project-category">Branding</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Vibe Branding</h3>
+                        <p class="project-description">Complete brand identity for a music streaming startup including
+                            logo, color palette, and visual language.</p>
+                        <div class="project-meta">
+                            <div class="project-tech">
+                                <span class="tech-tag">Illustrator</span>
+                                <span class="tech-tag">After Effects</span>
+                            </div>
+                            <a href="#" class="project-link view-btn">View Project <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="web" data-project="astro">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                            alt="Astro CMS">
+                        <span class="project-category">Web App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Astro CMS</h3>
+                        <p class="project-description">A headless content management system with AI-powered content
+                            suggestions and multi-channel publishing.</p>
+                        <div class="project-meta">
+                            <div class="project-tech">
+                                <span class="tech-tag">Vue.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">PostgreSQL</span>
+                            </div>
+                            <a href="#" class="project-link view-btn">View Project <i
+                                    class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modals -->
+    <!-- Nexus Dashboard Modal -->
+    <div class="project-modal" id="nexus-modal">
+        <div class="modal-container">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="Nexus Dashboard">
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title">Nexus Dashboard</h3>
+                <p class="modal-subtitle">A comprehensive analytics platform transforming complex data into actionable
+                    insights for enterprise clients.</p>
+
+                <div class="modal-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Client</div>
+                        <div class="meta-value">DataCorp Solutions</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Category</div>
+                        <div class="meta-value">Web Application</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Year</div>
+                        <div class="meta-value">2023</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Duration</div>
+                        <div class="meta-value">6 Months</div>
+                    </div>
+                </div>
+
+                <div class="modal-content">
+                    <div class="project-details">
+                        <h4>Project Overview</h4>
+                        <p>Nexus Dashboard was developed to solve DataCorp's challenge of making their complex datasets
+                            accessible and actionable for non-technical users. The platform aggregates data from
+                            multiple sources into a unified interface with customizable dashboards.</p>
+
+                        <h4>Key Challenges</h4>
+                        <p>The main challenges included handling large datasets in real-time, creating an intuitive
+                            interface for non-technical users, and ensuring the system could integrate with existing
+                            enterprise tools.</p>
+
+                        <h4>Our Solution</h4>
+                        <p>We developed a React-based frontend with custom data visualization components powered by
+                            D3.js. The backend was built with Node.js and MongoDB to handle large-scale data processing.
+                            We implemented:</p>
+                        <ul>
+                            <li>Real-time data streaming with WebSockets</li>
+                            <li>Customizable dashboard layouts with drag-and-drop</li>
+                            <li>Role-based access control</li>
+                            <li>Automated report generation</li>
+                            <li>Predictive analytics features</li>
+                        </ul>
+
+                        <h4>Results</h4>
+                        <p>Since launch, Nexus Dashboard has helped DataCorp's clients reduce decision-making time by
+                            40% and identify new revenue opportunities worth over $2M annually.</p>
+                    </div>
+
+                    <div class="project-sidebar">
+                        <div class="tech-stack">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-list">
+                                <span class="tech-item">React</span>
+                                <span class="tech-item">Redux</span>
+                                <span class="tech-item">D3.js</span>
+                                <span class="tech-item">Node.js</span>
+                                <span class="tech-item">Express</span>
+                                <span class="tech-item">MongoDB</span>
+                                <span class="tech-item">WebSockets</span>
+                            </div>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="#" class="action-btn live-btn">
+                                <i class="fas fa-external-link-alt"></i> View Live Project
+                            </a>
+                            <a href="#" class="action-btn github-btn">
+                                <i class="fab fa-github"></i> View Code (Client)
+                            </a>
+                            <a href="#" class="action-btn github-btn">
+                                <i class="fab fa-github"></i> View Code (Server)
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add similar modals for other projects -->
+    <!-- Pulse Fitness Modal -->
+    <div class="project-modal" id="pulse-modal">
+        <div class="modal-container">
+            <button class="modal-close">&times;</button>
+            <div class="modal-header">
+                <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                    alt="Pulse Fitness">
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title">Pulse Fitness</h3>
+                <p class="modal-subtitle">A mobile fitness companion that personalizes workouts and tracks progress with
+                    AI-powered recommendations.</p>
+
+                <div class="modal-meta">
+                    <div class="meta-item">
+                        <div class="meta-label">Client</div>
+                        <div class="meta-value">Pulse Health Inc.</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Category</div>
+                        <div class="meta-value">Mobile Application</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Year</div>
+                        <div class="meta-value">2022</div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-label">Duration</div>
+                        <div class="meta-value">4 Months</div>
+                    </div>
+                </div>
+
+                <div class="modal-content">
+                    <div class="project-details">
+                        <h4>Project Overview</h4>
+                        <p>Pulse Fitness was designed to make personalized fitness accessible to everyone, regardless of
+                            their experience level or available equipment. The app adapts to each user's progress and
+                            preferences.</p>
+
+                        <h4>Key Features</h4>
+                        <ul>
+                            <li>AI-generated workout plans based on goals and equipment</li>
+                            <li>Form correction using smartphone cameras</li>
+                            <li>Integration with wearables and health apps</li>
+                            <li>Community challenges and leaderboards</li>
+                            <li>Nutrition tracking with barcode scanning</li>
+                        </ul>
+
+                        <h4>Technical Highlights</h4>
+                        <p>We used Flutter for cross-platform compatibility and Firebase for real-time data sync. The AI
+                            recommendation engine was built with TensorFlow Lite for on-device processing.</p>
+
+                        <h4>Results</h4>
+                        <p>Pulse Fitness launched with 10,000 beta users and achieved 4.8/5 rating in app stores. It now
+                            has over 250,000 active users with 70% weekly retention rate.</p>
+                    </div>
+
+                    <div class="project-sidebar">
+                        <div class="tech-stack">
+                            <h4>Tech Stack</h4>
+                            <div class="tech-list">
+                                <span class="tech-item">Flutter</span>
+                                <span class="tech-item">Dart</span>
+                                <span class="tech-item">Firebase</span>
+                                <span class="tech-item">TensorFlow Lite</span>
+                                <span class="tech-item">Google Fit API</span>
+                                <span class="tech-item">HealthKit</span>
+                            </div>
+                        </div>
+
+                        <div class="project-actions">
+                            <a href="#" class="action-btn live-btn">
+                                <i class="fab fa-apple"></i> App Store
+                            </a>
+                            <a href="#" class="action-btn live-btn">
+                                <i class="fab fa-google-play"></i> Play Store
+                            </a>
+                            <a href="#" class="action-btn github-btn">
+                                <i class="fas fa-lock"></i> Private Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Project Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Update active filter
+                filterBtns.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.dataset.filter;
+
+                // Filter projects
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.dataset.category === filter) {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 50);
+                    } else {
+                        card.style.opacity = '0';
+                        card.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            card.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+        });
+
+        // Project Modal Functionality
+        const viewBtns = document.querySelectorAll('.view-btn');
+        const projectModals = document.querySelectorAll('.project-modal');
+        const closeBtns = document.querySelectorAll('.modal-close');
+
+        viewBtns.forEach(btn => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                const projectCard = this.closest('.project-card');
+                const projectId = projectCard.dataset.project;
+                const modal = document.getElementById(`${projectId}-modal`);
+
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        closeBtns.forEach(btn => {
+            btn.addEventListener('click', function () {
+                const modal = this.closest('.project-modal');
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        projectModals.forEach(modal => {
+            modal.addEventListener('click', function (e) {
+                if (e.target === this) {
+                    this.classList.remove('active');
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                projectModals.forEach(modal => {
+                    if (modal.classList.contains('active')) {
+                        modal.classList.remove('active');
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        });
+
+        // Animate project cards on load
+        function animateProjects() {
+            projectCards.forEach((card, index) => {
+                const cardTop = card.getBoundingClientRect().top;
+                if (cardTop < window.innerHeight - 100) {
+                    card.style.transitionDelay = `${index * 0.1}s`;
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }
+            });
+        }
+
+        // Initialize cards as invisible
+        projectCards.forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.5s ease';
+        });
+
+        window.addEventListener('load', animateProjects);
+        window.addEventListener('scroll', animateProjects);
+    </script>
+</body>
+
+</html>
